@@ -1,14 +1,5 @@
 import java.util.Scanner;
-
-/**
- *
- * @author Smile
- */
 public class SimpleECommerceSystem {
-
-    /**
-     * @param args the command line arguments
-     */
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
         System.out.println("Welcome to E-commerce System");
@@ -44,7 +35,6 @@ public class SimpleECommerceSystem {
         c.setCustomerId(id);
         c.setName(name);
         c.setAddress(address);
-
         Order o = new Order();
         o.setCustomerId(id);
         Cart cart = new Cart();
@@ -68,7 +58,6 @@ public class SimpleECommerceSystem {
                     System.out.println("Product is not available");
                     break;
             }
-
         }
         System.out.println("Do you want to remove any product from the cart?1-Yes 2-No");
         int removeProduct = input.nextInt();
@@ -96,13 +85,10 @@ public class SimpleECommerceSystem {
                                 System.out.println("Product is not available");
                                 break;
                         }
-
-                    }
+  }
                     break;
                 }
-
             }
-
         }
         o.setProducts(cart.getProducts());
         o.setTotalPrice(cart.calculatePrice());
